@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Combinator Selectors and Chess Board Design</title>
+    <style>
+        /* Descendant Combinator :- Select all p tag inside the div tag */
+        /* div p {
+        border: 1px solid black;
+      } */
+
+        /* Child Combinator:- slect all p tag inside the div directly not deeply or netsing */
+        /* div > p {
+        color: red;
+      } */
+
+        /* Adjacent Sibling Combinator :-  */
+        /* div + h1 {
+        font-size: 18px;
+      } */
+
+        /*  Subsequent-Sibling Combinator :- selct all h2 tag after the div tag */
+        /* div ~ h2 {
+        background-Color: green;
+      } */
+        table,
+        td {
+            border: 3px solid green;
+
+        }
+
+        table {
+            height: 500px;
+            width: 500px;
+            border-collapse: collapse;
+        }
+
+        tr:nth-child(even) td:nth-child(odd) {
+            background-color: black;
+        }
+
+        tr:nth-child(odd) td:nth-child(even) {
+            background-color: black;
+
+        }
+        tr:nth-child(even) td:nth-child(odd):hover,
+        tr:nth-child(odd) td:nth-child(even):hover {
+            background-color: red;
+        }
+        footer{
+            height: 44px;
+            width: 100%;
+            background-color: indigo;
+            color: white;
+            text-align: center;
+            padding-top: 18px;
+            margin-top: 28px;
+        }
+    </style>
+</head>
+
+<body>
+
+    
+    <h1>Chess Board</h1>
+    <table>
+        <tr class="first">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+
+    </table>
+    <footer>
+
+        <!--Marequee tags: this is an old animated scrolling tags-->
+    <marquee behavior="" direction="right">Copyright &copy; All rights Reserved</marquee></footer>
+
+</body>
+
+</html>
