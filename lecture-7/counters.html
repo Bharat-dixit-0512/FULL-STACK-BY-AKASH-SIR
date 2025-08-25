@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counters</title>
+    <style>
+        body{
+            counter-reset: title;
+        }
+        h1{
+            counter-reset: subsection;
+        }
+        h1::before{
+            counter-increment: title;
+            content: "Title" counter(title)" : ";
+        }
+        h2::before{
+            counter-increment: subsection;
+            content: counter(title)"." counter(subsection) " ";
+        }
+    </style>
+</head>
+<body>
+    <h1>first heading </h1>
+    <h2>Hello i am h2</h2>
+    <h2>Hello i am h2</h2>
+    <h2>Hello i am h2</h2>
+    <h1>second heading </h1>
+    <h2>hello i am second h2</h2>
+    
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Registration Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url("https://xclcamps.com/wp-content/uploads/coding-difference-1.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #333;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.85);
+            border-radius: 10px;
+            padding: 30px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            font-weight: bold;
+            color: #007acc;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 18px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .button-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        button {
+            flex: 1;
+            padding: 10px;
+            background-color: #007acc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #005fa3;
+        }
+
+        .link-button {
+            background-color: transparent;
+            color: #007acc;
+            border: none;
+            text-decoration: underline;
+            cursor: pointer;
+            padding: 8px;
+            font-size: 14px;
+        }
+
+        .link-button:hover {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form>
+
+            <h1>User Registration</h1>
+
+            <label for="username">User Name</label>
+            <input type="text" id="username" name="username" placeholder="Enter your name" required
+                autocomplete="name" />
+
+            <label for="email">Email*</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required autocomplete="email" />
+
+            <label for="password">Password*</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required
+                autocomplete="new-password" />
+
+            <label for="confirmPassword">Confirm Password*</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password"
+                required />
+
+            <label for="contact">Contact No.</label>
+            <input type="tel" id="contact" name="contact" placeholder="Enter your contact number" pattern="[0-9]{10}" />
+
+            <label for="address">Home Address</label>
+            <input type="text" id="address" name="address" placeholder="Enter your home address" />
+
+            <div class="button-group">
+                <button type="submit">Register</button>
+                <button type="reset" class="link-button">Reset</button>
+                <button type="button" class="link-button">Forgot Password?</button>
+            </div>
+
+        </form>
+    </div>
+</body>
+
+</html>
