@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            margin-top: 70px;
+        }
+        .outerring{
+            height: 400px;
+            width: 400px;
+            border: 1px solid blue;
+            border-radius:50% ;
+            background-color: skyblue;
+            position: relative;
+            box-shadow: 0 0 15px blue;
+        }
+        .innerring{
+            height: 60px;
+            width: 60px;
+            border: 1px solid black;
+            border-radius:50%;
+            position: absolute;
+            left: 60px;
+            top: 0px;
+            animation: orbitrotation 6px linear infinite;
+
+        }
+        @keyframes orbitrotaion {
+            0%{
+                transform: rotate(0deg);
+
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+            
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="outerring">
+        <div class="innerring"></div>
+    </div>
+
+</body>
+
+</html>
