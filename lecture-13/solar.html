@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="https://cdn.vectorstock.com/i/1000v/37/72/logo-for-solar-system-vector-47253772.jpg">
+    <title>Solar System</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #000;
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+            position: relative;
+        }
+
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background-color: white;
+            border-radius: 50%;
+            animation: sparkle 2s infinite ease-in-out;
+        }
+
+        @keyframes sparkle {
+
+            0%,
+            100% {
+                opacity: 0.3;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.5);
+            }
+        }
+
+        .meteoroid {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background: linear-gradient(to bottom right, white, transparent);
+            border-radius: 50%;
+            animation: strike 2s ease-in infinite;
+            transform: rotate(45deg);
+            opacity: 0;
+        }
+
+        .meteoroid1 {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background: linear-gradient(to bottom right, white, transparent);
+            border-radius: 50%;
+            animation: strike 2s ease-in infinite;
+            transform: rotate(45deg);
+            opacity: 0;
+        }
+
+        .meteoroid2 {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background: linear-gradient(to bottom right, white, transparent);
+            border-radius: 50%;
+            animation: strike 2s ease-in infinite;
+            transform: rotate(45deg);
+            opacity: 0;
+        }
+
+        .meteoroid3 {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background: linear-gradient(to bottom right, white, transparent);
+            border-radius: 50%;
+            animation: strike 2s ease-in infinite;
+            transform: rotate(45deg);
+            opacity: 0;
+        }
+
+        .meteoroid {
+            top: -20px;
+            left: -20px;
+            animation-delay: 0s;
+        }
+
+        .meteoroid1 {
+            top: -60px;
+            left: -80px;
+            animation-delay: 0.5s;
+        }
+
+        .meteoroid2 {
+            top: -100px;
+            left: -150px;
+            animation-delay: 1s;
+        }
+
+        .meteoroid3 {
+            top: -140px;
+            left: -220px;
+            animation-delay: 1.5s;
+        }
+
+        @keyframes strike {
+            0% {
+                transform: translate(0, 0) rotate(45deg);
+                opacity: 1;
+                box-shadow: 0 0 25px white;
+            }
+
+            100% {
+                transform: translate(100vw, 100vh) rotate(45deg);
+                opacity: 0;
+                box-shadow: 0 0 25px white;
+            }
+        }
+
+        .sun {
+            width: 120px;
+            height: 120px;
+            background: radial-gradient(circle, yellow, orange);
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: shadowsun 2s linear infinite ;
+            z-index: 2;
+        }
+        @keyframes shadowsun {
+            0%,100%{
+                box-shadow: 0 0 20px yellow;
+            }
+            50%{
+                box-shadow: 0 0 40px orange;
+            }
+        }
+
+        .earth-orbit {
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: rotate-earth 12s linear infinite;
+            transform-origin: center center;
+        }
+
+        .earth {
+            width: 50px;
+            height: 50px;
+            background: radial-gradient(circle, rgb(3, 253, 41), #0ff);
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 175px;
+            box-shadow: 0 0 15px #0ff;
+        }
+
+        .moon-orbit {
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            animation: rotate-moon 3s linear infinite;
+            transform-origin: center center;
+        }
+
+        .moon {
+            width: 15px;
+            height: 15px;
+            background: radial-gradient(circle, #ccc, #999);
+            border-radius: 50%;
+            position: absolute;
+            top: -14px;
+            left: 32px;
+            box-shadow: 0 0 8px #aaa;
+        }
+
+        @keyframes rotate-earth {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+        @keyframes rotate-moon {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="star" style="top: 10%; left: 20%;"></div>
+    <div class="star" style="top: 30%; left: 70%;"></div>
+    <div class="star" style="top: 50%; left: 40%;"></div>
+    <div class="star" style="top: 80%; left: 60%;"></div>
+    <div class="star" style="top: 90%; left: 10%;"></div>
+
+    <div class="meteoroid"></div>
+    <div class="meteoroid1"></div>
+    <div class="meteoroid2"></div>
+    <div class="meteoroid3"></div>
+
+    <div class="sun"></div>
+    <div class="earth-orbit">
+        <div class="earth">
+            <div class="moon-orbit">
+                <div class="moon"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
