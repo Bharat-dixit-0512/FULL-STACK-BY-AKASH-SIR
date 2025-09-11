@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyPage</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+        *::-webkit-scrollbar{
+            display: none;
+        }
+
+        body {
+            background-color: #b0b0b0;
+            font-family: sans-serif;
+        }
+
+        ul {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: skyblue;
+            min-width: 100%;
+            height: 60px;
+            list-style-type: none;
+            font-size: x-large;
+            border-radius: 0 0 15px 15px ;
+            border-bottom:2px solid black ;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+        }
+
+        ul a {
+            text-decoration: none;
+            color: red;
+            font-weight: 600;
+        }
+
+        a:hover {
+            color: maroon;
+        }
+
+        main {
+            min-height: 86vh;
+        }
+
+        .second {
+            background-color: #fff;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .firstheading {
+            margin-top: 40px;
+            margin-bottom: 30px;
+        }
+
+        footer {
+            min-width: 100%;
+            background-color: skyblue;
+            height: 42px;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cardsection {
+            background-color: #fff;
+            height: 66vh;
+            min-width: 100%;
+            margin: 2px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 80px;
+        }
+
+        .mypara {
+            font-size: x-large;
+            font-weight: 700;
+        }
+
+        .card {
+            width: 20vw;
+            height: 50vh;
+            background-color: rgb(181, 224, 241);
+            border: 1px solid black;
+            border-radius: 10px;
+            box-shadow: 0 3px 4px rgba(0, 0, 0, 0.4);
+        }
+        .h2{
+            text-align: center;
+            margin: 20px;
+            font-size: xx-large;
+        }
+        .p2{
+            text-align: center;
+            color: red;
+            font-size: x-large;
+        }
+        @media only screen and (max-width:780px){
+            
+            .cardsection{
+                flex-direction: column;
+                min-height: max-content;
+                padding: 23px;
+            }
+            .card{
+                height: 20vh;
+                width: 40vw;
+            }
+            .h2{
+                font-size: small;
+            }
+            .p2{
+              font-size: smaller;  
+            }
+            
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Service</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="second">
+            <h1 class="firstheading">Welcome TO My Page</h1>
+            <p class="mypara">
+                <marquee> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ut voluptates, soluta quo optio
+                    perspiciatis dolore adipisci quos odio asperiores inventore ex facere beatae odit cupiditate dolor
+                    laborum. Voluptatum, tempore.</marquee>
+            </p>
+        </section>
+        <section class="cardsection">
+            <section class="card">
+                <h2 class="h2">
+                    Feature 1
+                </h2>
+                <p class="p2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti hic quisquam quasi sit et id
+                    consequatur velit alias, voluptatem fugiat animi consequuntur suscipit.</p>
+            </section>
+            <section class="card">
+                <h2 class="h2">
+                    Feature 2
+                </h2>
+                <p class="p2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti hic quisquam quasi sit et id
+                    consequatur velit alias, voluptatem fugiat animi consequuntur suscipit.</p>
+            </section>
+            
+            <section class="card">
+                <h2 class="h2">
+                    Feature 3
+                </h2>
+                <p class="p2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti hic quisquam quasi sit et id
+                    consequatur velit alias, voluptatem fugiat animi consequuntur suscipit.</p>
+            </section>
+            </section>
+        
+    </main>
+    <footer>Copyright &copy; | All Rights Reserved</footer>
+</body>
+
+</html>
