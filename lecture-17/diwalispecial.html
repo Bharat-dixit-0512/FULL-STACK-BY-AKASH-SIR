@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diwali Wishes</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+     
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      perspective: 1200px;
+      overflow: hidden;
+    }
+
+    .container {
+      position: relative;
+      max-width: 600px;
+      width: 90%;
+      padding: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      position: relative;
+      z-index: 1;
+      background-color: #fff;
+      border: 2px solid #333;
+      border-radius: 12px;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(255, 165, 0, 0.6);
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    .card h1 {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      color: #007f00;
+      margin-bottom: 1rem;
+    }
+
+    .card p {
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .door {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #8b4513;
+      border-radius: 18px;
+      transition: transform 0.8s ease;
+      transform-origin: left center;
+      z-index: 2;
+      cursor: pointer;
+    }
+
+    .door:hover {
+      transform: rotateY(-100deg);
+    }
+
+    @keyframes glow {
+      from {
+        box-shadow: 0 0 10px rgba(255, 165, 0, 0.4);
+      }
+      to {
+        box-shadow: 0 0 25px rgba(255, 215, 0, 0.8);
+      }
+    }
+
+    .diya {
+      position: absolute;
+      bottom: -50px;
+      width: 30px;
+      height: 30px;
+      background: radial-gradient(circle, orange 40%, transparent 70%);
+      border-radius: 50%;
+      animation: floatUp 6s linear infinite;
+      opacity: 0.8;
+    }
+
+    .diya:nth-child(1) {
+      left: 10%;
+      animation-delay: 0s;
+    }
+
+    .diya:nth-child(2) {
+      left: 30%;
+      animation-delay: 2s;
+    }
+
+    .diya:nth-child(3) {
+      left: 60%;
+      animation-delay: 4s;
+    }
+
+    .diya:nth-child(4) {
+      left: 80%;
+      animation-delay: 1s;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.8;
+      }
+      50% {
+        transform: translateY(-200px) scale(1.2);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-400px) scale(0.8);
+        opacity: 0;
+      }
+    }
+
+    .firework {
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      width: 10px;
+      height: 10px;
+      background: radial-gradient(circle, yellow 0%, transparent 70%);
+      border-radius: 50%;
+      animation: burst 1.5s ease-out infinite;
+    }
+
+    @keyframes burst {
+      0% {
+        transform: scale(0);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(5);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container" role="region" aria-label="Diwali Greeting">
+    <section class="card">
+      <h1>🎆 Wishing You a Sparkling Diwali! 🎆</h1>
+      <p>🪔 May your life be as vibrant as the rangoli, as bright as the diyas, and as joyful as the fireworks.<br>
+        Here’s to new beginnings, sweet moments, and endless success.<br>
+        Happy Diwali to you and your loved ones!</p>
+    </section>
+    <div class="door" aria-label="Click to open the Diwali door"></div>
+    <div class="diya"></div>
+    <div class="diya"></div>
+    <div class="diya"></div>
+    <div class="diya"></div>
+    <div class="firework"></div>
+  </main>
+</body>
+
+</html>
