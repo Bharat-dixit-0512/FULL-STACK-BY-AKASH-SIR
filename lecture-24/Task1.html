@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ball Transition</title>
+    <style>
+      #ball {
+        border-radius: 50%;
+        height: 100px;
+        width: 100px;
+        background-color: aquamarine;
+      }
+
+      #start {
+        margin-top: 30px;
+      }
+
+      .move {
+        animation: movingMe 5s linear 0.5s infinite alternate;
+      }
+
+      @keyframes movingMe {
+        0% {
+          transform: translateX(0);
+        }
+
+        100% {
+          transform: translateX(80vw);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="ball"></div>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <script>
+      const ball = document.getElementById("ball");
+      const start = document.getElementById("start");
+      const stop = document.getElementById("stop");
+      start.addEventListener("click", () => {
+        ball.classList.add("move");
+      });
+      stop.addEventListener("click", () => {
+        ball.classList.remove("move");
+      });
+    </script>
+  </body>
+</html>

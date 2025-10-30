@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        body {
+            background-image: url("https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dG8lMjBkbyUyMGxpc3R8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=900");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+        }
+
+        #main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 800px;
+            padding: 40px;
+            margin-top: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        h2 {
+            font-size: 48px;
+            margin-bottom: 30px;
+            font-weight: 600;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            text-shadow: 0 0 8px black;
+            
+        }
+
+        #input-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        #add-task {
+            width: 120px;
+            margin-left: 10px;
+            text-align: center;
+            border-radius: 10px;
+            font-weight: bold;
+            border: none;
+            height: 40px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        #add-task:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+
+        #input {
+            height: 40px;
+            border-radius: 12px;
+            width: 250px;
+            text-align: center;
+            border: 1px solid #ccc;
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #333;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        #input:focus {
+            outline: none;
+            border-color: #4CAF50;
+            box-shadow: 0 0 8px 0 rgba(76, 175, 80, 0.5);
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            width: 100%;
+        }
+
+        li {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+            color: #333;
+        }
+
+        li:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateX(5px);
+        }
+
+        #clear-all {
+            margin-top: 20px;
+            padding: 10px 20px;
+            border-radius: 10px;
+            border: none;
+            background-color: #f44336;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        #clear-all:hover {
+            background-color: #da190b;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <h2>Todo List</h2>
+        <div id="input-section">
+            <input id="input" type="text" placeholder="Write your task">
+            <button id="add-task">ADD Task</button>
+        </div>
+        <ul id="addData"></ul>
+        <button id="clear-all">Clear-All</button>
+    </div>
+    <script>
+        const input = document.querySelector('#input');
+        const addTask = document.querySelector('#add-task');
+        const ul = document.querySelector('#addData');
+        const clear = document.querySelector('#clear-all');
+
+        addTask.addEventListener('click', () => {
+            const data = input.value.trim();
+            confirm('May I Add Your Task ??');
+            if (data === '') {
+                alert('Please Enter the text in Input field');
+            } else {
+                const li = document.createElement('li');
+                li.textContent = `${data}`;
+                ul.appendChild(li);
+                input.value = '';
+            }
+        });
+
+        clear.addEventListener('click', () => {
+            const li = document.querySelectorAll('li');
+            if (li.length === 0) {
+                alert('No Task Found');
+            } else {
+                li.forEach(li => li.remove());
+            }
+        });
+    </script>
+</body>
+</html>

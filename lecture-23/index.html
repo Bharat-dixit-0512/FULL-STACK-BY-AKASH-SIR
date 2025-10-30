@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,6 +29,7 @@
         }
     </style>
 </head>
+
 <body>
     <div>
         <table id="table"></table>
@@ -40,7 +42,7 @@
             const th = document.createElement('th');
             th.textContent = String.fromCharCode(97 + i); // ASCII 97 = 'a'
             th.style.border = '1px solid black';
-            hRow.appendChild(th);
+            hRow.appendChild(th); //append ASCII Value in th (table head)
         }
         temp.appendChild(hRow);
 
@@ -50,9 +52,10 @@
                 const td = document.createElement('td');
                 td.classList.add((row + col) % 2 === 0 ? 'white' : 'black');
                 tr.appendChild(td);
-            }
+            } 
             temp.appendChild(tr);
         }
     </script>
 </body>
+
 </html>
