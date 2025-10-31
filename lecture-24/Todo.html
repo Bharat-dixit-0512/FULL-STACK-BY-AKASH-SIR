@@ -40,9 +40,7 @@
             font-size: 48px;
             margin-bottom: 30px;
             font-weight: 600;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
             text-shadow: 0 0 8px black;
-            
         }
 
         #input-section {
@@ -148,14 +146,23 @@
 
         addTask.addEventListener('click', () => {
             const data = input.value.trim();
-            confirm('May I Add Your Task ??');
             if (data === '') {
                 alert('Please Enter the text in Input field');
             } else {
-                const li = document.createElement('li');
-                li.textContent = `${data}`;
-                ul.appendChild(li);
-                input.value = '';
+                if (confirm('May I Add Your Task ??')) {
+                    const li = document.createElement('li');
+                    const button = document.createElement('button');
+                    button.innerHTML = 'Delete';
+                    button.style.borderRadius = '5px';
+                    button.classList.add('delete-btn');
+                    button.addEventListener('click', () => {
+                        li.remove();
+                    });
+                    li.textContent = data;
+                    li.appendChild(button);
+                    ul.appendChild(li);
+                    input.value = '';
+                }
             }
         });
 
