@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -128,6 +129,7 @@
         }
     </style>
 </head>
+
 <body>
     <div id="main">
         <h2>Todo List</h2>
@@ -152,13 +154,29 @@
                 if (confirm('May I Add Your Task ??')) {
                     const li = document.createElement('li');
                     const button = document.createElement('button');
-                    button.innerHTML = 'Delete';
-                    button.style.borderRadius = '5px';
+                    const edit = document.createElement('button');
+
+                    edit.textContent = 'Edit';
+                    edit.classList.add('edit-btn');
+                    edit.style.borderRadius = '5px';
+                    edit.style.marginLeft = '10px';
+
+                    button.textContent = 'Delete';
                     button.classList.add('delete-btn');
+                    button.style.borderRadius = '5px';
+                    button.style.marginLeft = '10px';
+
+                    edit.addEventListener('click', () => {
+                        input.value = data;
+                        li.remove();
+                    });
+
                     button.addEventListener('click', () => {
                         li.remove();
                     });
+
                     li.textContent = data;
+                    li.appendChild(edit);
                     li.appendChild(button);
                     ul.appendChild(li);
                     input.value = '';
@@ -174,6 +192,8 @@
                 li.forEach(li => li.remove());
             }
         });
+
     </script>
 </body>
+
 </html>
