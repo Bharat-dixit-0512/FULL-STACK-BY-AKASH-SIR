@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let t=setTimeout(function hello(){
+            alert('enter');
+        },2000);
+        let b=prompt('do  you want to terminate the task');
+        if(b=='y'){
+            clearTimeout(t);
+        }
+
+        console.log(t);
+    </script>
+</body>
+</html>
