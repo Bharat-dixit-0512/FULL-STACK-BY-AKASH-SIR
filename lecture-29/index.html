@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let p = new Promise((res, rej) => {
+            const a = 2;
+            const b = 3;
+            if (a + b == 5) {
+                res('done');
+            }
+            else {
+                rej('failed');
+            }
+        })
+
+        // const onFullFill=(result)=>{
+        //     document.write(result);
+        //     console.log(result)
+        // }
+        // const onReject=(err)=>{
+        //     console.log(err)
+        //     document.write(err);
+        // }
+
+        // p.then(onFullFill).catch(onReject)
+
+        async function num(){
+            return "hello"
+
+        }
+        console.log(num())
+    </script>
+    
+</body>
+
+</html>
